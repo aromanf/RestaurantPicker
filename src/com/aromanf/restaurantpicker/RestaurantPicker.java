@@ -2,12 +2,13 @@ package com.aromanf.restaurantpicker;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 class RestaurantPicker {
     private ArrayList<Restaurant> restaurants;
     private boolean filterType;
     private String typeValue;
+    private boolean cuisineType;
+    private String cuisineValue;
 
     RestaurantPicker(ArrayList<Restaurant> restaurants) {
         this.restaurants = restaurants;
@@ -21,8 +22,22 @@ class RestaurantPicker {
 
         for(Restaurant restaurant : this.restaurants) {
 
-            if(this.filterType && this.typeValue.toLowerCase().equals(restaurant.getType().toLowerCase())) {
-                return restaurant;
+            if(filterType && !cuisineType) {
+                if(this.typeValue.equals(restaurant.getType())) {
+                    return restaurant;
+                }
+            }
+            if(filterType && cuisineType) {
+                if(this.typeValue.equals(restaurant.getType())
+                && this.cuisineValue.equals(restaurant.getCuisine())) {
+                    return restaurant;
+                }
+            }
+
+            if(!filterType && cuisineType) {
+                if(this.cuisineValue.equals(restaurant.getCuisine())) {
+                    return restaurant;
+                }
             }
         }
         return null;
@@ -31,5 +46,10 @@ class RestaurantPicker {
     public void filterByType(String type) {
         this.filterType = true;
         this.typeValue = type;
+    }
+
+    public void filterByCuisine(String cuisine) {
+        this.cuisineType = true;
+        this.cuisineValue = cuisine;
     }
 }

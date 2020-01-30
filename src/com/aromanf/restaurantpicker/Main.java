@@ -12,6 +12,8 @@ public class Main {
                 new ArrayList<>(Arrays.asList("Hamburgers", "Chicken"))));
         restaurants.add(new Restaurant("Atlantic Rest Pizza", "Casual Dining", "Puerto Rican",
                 new ArrayList<>(Arrays.asList("Mofongo", "Pizza"))));
+        restaurants.add(new Restaurant("Panda Express", "Casual Dining", "American Chinese",
+                new ArrayList<>(Arrays.asList("Mofongo", "Pizza"))));
 
         System.out.println("-- Restaurant Picker Application --");
         RestaurantPicker picker = new RestaurantPicker(restaurants);
@@ -19,6 +21,8 @@ public class Main {
         picker.filterByType("Fast Food");
         System.out.println(picker.chooseRandomRestaurant());
         picker.filterByType("Casual Dining");
+        System.out.println(picker.chooseRandomRestaurant());
+        picker.filterByCuisine("American Chinese");
         System.out.println(picker.chooseRandomRestaurant());
     }
 }
