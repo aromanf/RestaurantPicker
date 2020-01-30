@@ -10,9 +10,15 @@ public class Main {
                 new ArrayList<>(Arrays.asList("Hamburgers", "Chicken"))));
         restaurants.add(new Restaurant("Kentucky Fried Chicken", "Fast Food", "American",
                 new ArrayList<>(Arrays.asList("Hamburgers", "Chicken"))));
+        restaurants.add(new Restaurant("Atlantic Rest Pizza", "Casual Dining", "Puerto Rican",
+                new ArrayList<>(Arrays.asList("Mofongo", "Pizza"))));
 
         System.out.println("-- Restaurant Picker Application --");
         RestaurantPicker picker = new RestaurantPicker(restaurants);
+        System.out.println(picker.chooseRandomRestaurant());
+        picker.filterByType("Fast Food");
+        System.out.println(picker.chooseRandomRestaurant());
+        picker.filterByType("Casual Dining");
         System.out.println(picker.chooseRandomRestaurant());
     }
 }

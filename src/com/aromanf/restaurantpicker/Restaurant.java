@@ -10,6 +10,38 @@ class Restaurant {
     //private FoodMenu foodMenu;
 
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getCuisine() {
+        return cuisine;
+    }
+
+    public void setCuisine(String cuisine) {
+        this.cuisine = cuisine;
+    }
+
+    public ArrayList<String> getFoodOfferings() {
+        return foodOfferings;
+    }
+
+    public void setFoodOfferings(ArrayList<String> foodOfferings) {
+        this.foodOfferings = foodOfferings;
+    }
+
     Restaurant(String name, String type, String cuisine, ArrayList<String> foodOfferings) {
         this.name = name;
         this.type = type;
