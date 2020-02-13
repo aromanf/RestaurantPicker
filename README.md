@@ -1,4 +1,6 @@
-# RestaurantPicker
+# Restaurant Picker
 
-Java Program that selects a random Restaurant based on filtered criteria to help the user select the next Restaurant they 
-should eat at. 
+Restaurant Picker is a personal project written in Java that allows you to
+find information on Restaurants. You can search restaurants by name or filter 
+by type, cuisine, or food types. You can also randomly select a restaurant to
+help you determine the place to eat your next lunch. 
