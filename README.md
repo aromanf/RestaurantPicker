@@ -20,7 +20,7 @@ configuration, and integration with the Hibernate framework using the Spring Dat
 - MySQL
 - Maven
 
-##Screenshots
+## Screenshots
 ### REST Get
 ![REST Get All Restaurants](img/restaurants-rest-getall.JPG)
 
